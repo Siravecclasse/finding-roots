@@ -1,29 +1,26 @@
-# Object files
-*.o
-*.ko
-*.obj
-*.elf
+#include <stdio.h>
+#include <math.h>
 
-# Precompiled Headers
-*.gch
-*.pch
+int main()
 
-# Libraries
-*.lib
-*.a
-*.la
-*.lo
+{
+    int p,n,d,q,a,b,c,e;
+    float sum, coins;
+    
+     printf("Enter the amount of pennies, nickels, dimes, and quarters\n");
+     scanf("%d %d %d %d" ,&a,&b,&c,&e);
+    p = (1*a);
+    n = (5*b);
+    d = (10*c);
+    q = (25*e);
 
-# Shared objects (inc. Windows DLLs)
-*.dll
-*.so
-*.so.*
-*.dylib
-
-# Executables
-*.exe
-*.out
-*.app
-*.i*86
-*.x86_64
-*.hex
+    
+    
+    sum = (p+n+d+q)/100;
+    coins = (p+n+d+q)%100;    
+    
+    printf("you have %1.0f dollars and %1.0f cents\n" , sum, coins);
+     
+     system ("pause");
+     return 0;
+}
